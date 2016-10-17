@@ -54,6 +54,12 @@ pointerID() {
 	echo "$(xinput --list | grep pointer | cut -f 2 | cut -d= -f 2)"
 }
 
+if [[ $# -ne 1 ]]; then
+	echo "Usage:"
+	echo "  $(basename $0) <clockwise|counter-clockwise>"
+	exit 1
+fi
+
 if [ "$1" = "" ] || [ "$1" = "clockwise" ];
 then
 	rotate "$(clockwise "$(currentRotation)")"
@@ -63,4 +69,3 @@ then
 else
 	rotate "$1"
 fi
-
