@@ -42,7 +42,7 @@ counterClockwise() {
 	echo "${dict["$1"]}"
 }
 currentRotation() {
-	INFO="$(xrandr -q --verbose | grep LVDS1)"
+	INFO="$(xrandr -q --verbose | grep -E 'LVDS-?1')"
 	if [ "$(echo $INFO | cut -d' ' -f 3)" = "primary" ];
 	then
 		echo "$(echo $INFO | cut -d' ' -f 6)"
