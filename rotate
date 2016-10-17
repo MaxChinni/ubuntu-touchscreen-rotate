@@ -56,7 +56,7 @@ pointerID() {
 
 if [[ $# -ne 1 ]]; then
     echo "Usage:"
-    echo "  $(basename $0) <clockwise|counter-clockwise>"
+    echo "  $(basename $0) <clockwise|counter-clockwise|normal|inverted|left|right>"
     exit 1
 fi
 
