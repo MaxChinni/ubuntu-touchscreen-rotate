@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bash -e
 # Rotate the Microsoft Surface Pro touchscreen input
 # Usage: rotate [clockwise|counter-clockwise|normal|inverted|left|right]
 # The script will rotate the screen clockwise by default
